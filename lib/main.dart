@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:registro_login/datosUsuarios.dart';
-import 'package:registro_login/index.dart';
-import 'package:registro_login/registrarse.dart';
 import "package:firebase_core/firebase_core.dart" as firebase_core;
+import 'package:registro_login/screens/create-new-account.dart';
+import 'package:registro_login/screens/create-new_account-fin.dart';
+import 'package:registro_login/screens/forgot-password.dart';
+import 'package:registro_login/screens/login-screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       initialRoute: "/",
       routes: {
-        "/": (BuildContext context) => Index(),
-        "/registrarse": (BuildContext context) => Registro(),
-        "/datoUsuario": (BuildContext context) => DatosUsuarios()
+        '/': (context) => LoginScreen(),
+        'ForgotPassword': (context) => ForgotPassword(),
+        'CreateNewAccount': (context) => CreateNewAccount(),
+        'CreateNewAccountFin': (context) => CreateNewAccountFin()
       },
     );
   }

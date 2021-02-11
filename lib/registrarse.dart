@@ -2,9 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:path/path.dart' as Path;
-import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
-import "package:firebase_core/firebase_core.dart" as firebase_core;
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 import 'data/my_database.dart';

@@ -38,6 +38,11 @@ class MyDatabase {
     var db = await this.database;
     var result = await db.insert(tabla, map);
     print('result: $result');
+
+    var resul = await db.query(tabla);
+    resul.forEach((element) {
+      print(element);
+    });
   }
 
   /* Future<List<Person>> getPeople() async {

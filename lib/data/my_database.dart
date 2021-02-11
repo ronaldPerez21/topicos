@@ -34,12 +34,12 @@ class MyDatabase {
     return database;
   }
 
-  void insertPerson(Map<String, dynamic> map) async {
+  void insert(Map<String, dynamic> map, String tabla) async {
     var db = await this.database;
-    var result = await db.insert('datos_basicos', map);
+    var result = await db.insert(tabla, map);
     print('result: $result');
 
-    var resul = await db.query('datos_basicos');
+    var resul = await db.query(tabla);
     int i = 0;
     resul.forEach((element) {
       i = i + 1;

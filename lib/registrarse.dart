@@ -141,7 +141,7 @@ class _MyHomePageState extends State<Registro> {
           "tipo": "t"
         };
 
-        _myDatabase.insertPerson(map);
+        _myDatabase.insert(map, 'datos_basicos');
       });
     });
     /*final uri = Uri.parse("http://192.168.56.1/registro_login/registro.php");
